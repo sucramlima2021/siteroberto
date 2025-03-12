@@ -40,7 +40,7 @@ let chartObj = new Chart(tip, {
 	data: {
 		labels: ["0", "Ano 1", "Ano 2", "Ano 3", "Ano 4", "Ano 5"],
 		datasets: [{
-			label: "Carteira RVP",
+			label: "Cliente",
 			data: [1000, 1180, 1392, 1642, 1938, 2287],
 			backgroundColor: ['coral'],
 			borderColor: ["black"],

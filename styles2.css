@@ -74,17 +74,23 @@
   padding: 20px;
 }
 
+.backprinc {
+  background-image: url('fundo_ajustado.png');
+  background-size: cover; /* Ajusta a imagem para cobrir a div */
+  background-repeat: no-repeat; /* Evita repetição da imagem */
+  /* Outros estilos de background que você pode querer ajustar */
+  background-position: bottom right;
+}
+
 @media (max-width: 750px) {
-  #princ {
-    background-image: url('teste2.png');
+  .backprinc {
+    background-image: url('back_mobile.png');
     background-size: cover; /* Ajusta a imagem para cobrir a div */
     background-repeat: no-repeat; /* Evita repetição da imagem */
     /* Outros estilos de background que você pode querer ajustar */
-    text-align: center;
+    background-position: center center;
   }
-  #desenho{
-    display: none;
-  }
+  
   #nome{
     font-size: 20px;
   }
