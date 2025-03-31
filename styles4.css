@@ -2,14 +2,8 @@ body{
   background-color: rgb(230, 224, 216);
 }
 
-@font-face {
-  font-family: 'Luthier';
-  src: url('/siteroberto/Luthier-Bold.ttf') format('ttf');
-  /* Adicione outros formatos de fonte, se necessário */
-}
-
 .altura {
-  height: calc(100vh - 107px);
+  height: calc(100vh - 81px);
   overflow: hidden;
 }
 
@@ -31,13 +25,6 @@ body{
   font-family:'Poppins';
 }
 
-.fonte4 {
-  font-family:'Luthier';
-  font-weight: 700;
-  font-kerning: 50px;
-}
-
-
 .sombra {
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
   transition: box-shadow 0.3s ease;
@@ -49,19 +36,13 @@ body{
 }
 
 
-.botao {
-  text-decoration: none;
-  background-color: rgb(0,41,96);
-  color: rgb(230, 224, 216);
-  font-size: medium;
-  border-radius: 5px;
-  box-shadow: 2px 2px 5px rgba(171,120,54,0.8);
-  transition: all 0.2s linear;
-
+.ho {
+  background-color: #cccccc;
+  transition: all 0.3s linear;
 }
 
-.botao:hover{
-  background-color: rgb(171,120,54);
+.ho:hover{
+  background-color: #3f88f482;
 }
 
 .texto {

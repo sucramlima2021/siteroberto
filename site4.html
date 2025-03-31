@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Consultoria Financeira</title>
-    <link rel="stylesheet" href="styles2.css">
+    <link rel="stylesheet" href="styles4.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,46 +14,81 @@
 </head>
 <body>
     <!-- Navbar -->
-        <div class="d-flex flex-row justify-content-center" style="background-color: rgb(230, 224, 216);">
-            
-            <nav class="navbar navbar-expand-lg w-100 justify-content-between mx-3">
-                
-                    <a href="#"><img src="logo_aful.png" width="70px" class="img-fluid"> </a>
+        <div class="d-flex justify-content-center border d-none" style="background-color: rgb(230, 224, 216);">
+            <div class="col-md-8 col-sm-12">
+            <nav class="navbar navbar-expand-lg" >
+                <div class="row">
+                    <a class="navbar-brand fs-1 fonte" href="#"><img src="logo10.png" class="img-fluid"> </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav ms-auto">
-                            <li class="nav-item "><a class="nav-link" href="#proposta">Proposta</a></li>
-                            <li class="nav-item "><a class="nav-link " href="#quem-sou">Quem Sou</a></li>
-                            <li class="nav-item "><a class="nav-link " href="#resultados">Resultados</a></li>
-                            <li class="nav-item "><a class="nav-link " href="#servicos">Serviços</a></li>
-                            <li class="nav-item "><a class="nav-link " href="#quiz">Quiz</a></li>
-                            <li class="nav-item "><a class="nav-link " href="#ferramentas">Ferramentas</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#proposta"><span class="txtoff">Proposta</span></a></li>
+                            <li class="nav-item"><a class="nav-link txtoff" href="#quem-sou">Quem Sou</a></li>
+                            <li class="nav-item"><a class="nav-link txtoff" href="#resultados">Resultados</a></li>
+                            <li class="nav-item"><a class="nav-link txtoff" href="#servicos">Serviços</a></li>
+                            <li class="nav-item"><a class="nav-link txtoff" href="#quiz">Quiz</a></li>
+                            <li class="nav-item"><a class="nav-link txtoff" href="#ferramentas">Ferramentas</a></li>
                         </ul>
                     </div>
-                
+                </div>
             </nav>
-        
+        </div>
     </div>
         
     <!-- Hero Section -->
-    <section id="proposta" class="d-flex backprinc altura">
-          <div id="princ" class="col-md-7 col-sm-12 ">
-            
-            <div class="d-flex flex-column h-100 align-items-center justify-content-center text-center ">   
-              <div class="d-flex flex-column align-items-center">
-                <img src="logo_azul.png" class="img-fluid" style="max-width: 100px;">
-                <span class="fonte4" style="font-size: 60px; color: rgb(0, 41, 96);">VELASQUES</span>
-                <span style="margin-top: -20px; color: rgb(0, 41, 96);">CONSULTORIA DE INVESTIMENTOS E SEGUROS</span></div>
-              <div class="d-flex fs-6 fonte3 mx-5 my-5">
+    <section id="proposta" class="d-flex py-5 backprinc altura border d-none">
+          <div id="princ" class="col-md-7 col-sm-12 border">
+            <div class="d-flex flex-column h-100 align-items-center justify-content-center mx-5 text-center border">   
+              <div id="nome" class="d-flex" style="font-size: 70px;">VELASQUES</div>
+              <div class="d-flex" style="margin-top: -20px;">CONSULTORIA DE INVESTIMENTOS E SEGUROS</div>
+              <div class="d-flex fs-6 fonte3 mx-5 mt-4" id="typedtext">
                 <p>Minha proposta é transformar a sua vida financeira, para que você viva o presente, invista para o futuro e proteja suas conquistas.</p>
               </div>         
               <div class="d-flex ">
-              <a class="btn btn-warning fs-6 sombra fonte">Agendar Consulta Inicial Agora</a></div>
+              <a class="btn btn-warning fs-6 sombra fonte my-3">Agendar Consulta Inicial Agora</a></div>
             </div>
         </div>
       </section>
+
+      <!-- Hero Mobile Section -->
+      <div class="d-flex justify-content-between px-3 align-items-center" style="background-color: rgb(230, 224, 216);">
+        <a class="navbar-brand" href="#"><img src="logo_aful.png" style="width: 60px;" class="img-fluid"></a>
+        
+        <a class="btn" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" style="font-size: 50px; color: rgb(0 41 96)">
+          <i class="bi bi-card-list"></i>
+        </a>
+        
+        
+      </div>
+      <div class="collapse" id="collapseExample" style="background-color: rgb(230, 224, 216);">
+        <div class="d-flex justify-content-center">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="#proposta">Proposta</a></li>
+            <li class="nav-item"><a class="nav-link" href="#quem-sou">Quem Sou</a></li>
+            <li class="nav-item"><a class="nav-link" href="#resultados">Resultados</a></li>
+            <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
+            <li class="nav-item"><a class="nav-link" href="#quiz">Quiz</a></li>
+            <li class="nav-item"><a class="nav-link" href="#ferramentas">Ferramentas</a></li>
+        </ul>
+        </div>
+        
+      </div>
+      
+    <section id="propostaMobile" class="d-flex flex-column backprinc altura border">
+      
+      
+        <div class="d-flex flex-column h-100 align-items-center border">
+            <img src="logo11.png" class="img-fluid ">
+          <div class="d-flex fs-1 fonte2 my-5 text-center" id="typedtext">
+            <p>Minha proposta é transformar a sua vida financeira, para que você viva o presente, invista para o futuro e proteja suas conquistas.</p>
+          </div>         
+          <div class="d-flex ">
+          <a class="btn btn-warning fs-6 sombra fonte">Agendar Consulta Inicial Agora</a></div>
+        </div>
+    
+  </section>
     
     <!-- Seção Quem Sou -->
     <section id="quem-sou" class="container-fluid py-5 my-5">
@@ -63,7 +98,7 @@
                 <img src="pessoa.png" class="img-fluid rounded-circle shadow-lg border border-dark border-opacity-25 border-3" style="max-width: 300px;">
               </div>
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-12 mt-3">
+            <div class="col-lg-6 col-md-6 col-sm-12">
               <p><span class="fw-bold">Roberto Velasques Pereira</span> é Consultor de Valores Mobiliários – CVM, Corretor de Seguros – SUSEP, Correspondente Bancário – Febraban, bacharelado em Ciências Econômicas pela Universidade Federal Fluminense – UFF e possui um MBA em Gestão de Seguros e Resseguros e Produtos Financeiros pela Escola de Negócios e Seguros – ENS.</p>
                 
               <p>“Percebi no mercado uma oportunidade: Existem muitos profissionais de investimento, de seguros e de planejamento, mas poucos que possuem conhecimento prático, certificação e estrutura para atender o cliente de forma completa e principalmente de forma independente.”</p>
@@ -127,29 +162,25 @@
     </section>
     
     <!-- Seção Serviços -->
-    <section id="servicos" class="py-3 my-5" style="height: 100%; background-color: rgb(0, 41, 96);">
+    <section id="servicos" class="py-3 my-5">
         <div class="container">
-            <h2 class="text-center" style="color:rgb(243,241,240)">Meus Serviços</h2>
+            <h2 class="text-center">Meus Serviços</h2>
             
         </div>
 
+
+
 <div class="container">
     <div class="row">
-      <div class="col-md-6 col-sm-12 mt-3">
+      <div class="col-md-6 col-sm-12 mt-1">
         
-        <div class="card shadow" style="background-color: rgb(243, 241, 240)">
+        <div class="card shadow" style="height: 100%; background-color: rgb(243, 241, 240);">
           <div class="card-body">
-            <h5 class="card-title" style="color: rgb(0, 41, 96)"><i class="bi bi-currency-exchange fs-1"></i> Consultoria de Investimentos</h5>
-            <div class="accordion" id="accordionExample">
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    A Consultoria de Investimentos é celebrada através de um contrato entre o consultor e o cliente. Neste contrato constam valores de remuneração do consultor e os serviços prestados.
-                  </button>
-                </h2>
-                <div id="collapseOne" class="accordion-collapse collapse " data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    <span>Serviços da Consultoria de Investimentos:</span>
+            <h5 class="card-title"><i class="bi bi-currency-exchange"></i> Consultoria de Investimentos</h5>
+            <p class="card-text">
+              A Consultoria de Investimentos é celebrada através de um contrato entre o consultor e o cliente. Neste contrato constam valores de remuneração do consultor e os serviços prestados.
+            </p>
+              <span>Serviços da Consultoria de Investimentos:</span>
               <ul>
                 <li>Garantir uma renda mensal.</li>
                 <li>Reorganizar os investimentos existentes para melhores resultados.</li>
@@ -159,29 +190,18 @@
                 <li>Outros</li>
               </ul>
               <span>Público-alvo: Todos.</span>
-                  </div>
-                </div>
-              </div>
-            
            
           </div>
         </div>
       </div>
-      </div>
       <div class="col-md-6 col-sm-12 mt-1">
-        <div class="card shadow" style="background-color: rgb(243, 241, 240);">
+        <div class="card shadow" style="height: 100%; background-color: rgb(243, 241, 240);">
           <div class="card-body">
-            <h5 class="card-title" style="color: rgb(0, 41, 96)"><i class="bi bi-shield fs-1"></i> Corretagem de Seguros</h5>
-            <div class="accordion" id="accordionExample2">
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne2" aria-expanded="true" aria-controls="collapseOne2">
-                    A Corretagem de Seguros é um serviço de venda de seguros. A remuneração é através de comissão já embutida no produto.
-                  </button>
-                </h2>
-                <div id="collapseOne2" class="accordion-collapse collapse" data-bs-parent="#accordionExample2">
-                  <div class="accordion-body">
-                    <span>Produtos e Serviços da Corretagem de Seguros:</span>
+            <h5 class="card-title"><i class="bi bi-shield"></i> Corretagem de Seguros</h5>
+            <p class="card-text">
+              A Corretagem de Seguros é um serviço de venda de seguros. A remuneração é através de comissão já embutida no produto.
+            </p>
+            <span>Produtos e Serviços da Corretagem de Seguros:</span>
               <ul>
                 <li>Recursos financeiros em caso de falecimento, doença e/ou invalidez.</li>
                 <li>Indenização por afastamento do trabalho por doença ou acidente.</li>
@@ -190,12 +210,7 @@
                 <li>Outros</li>
               </ul>
               <span>Público-alvo: Todos.</span>
-                  </div>
-                </div>
-              </div>
             
-           
-          </div>
           </div>
         </div>
       </div>
@@ -207,7 +222,7 @@
       
       </div>
   </section>
-  <p class="text-center mx-2 my-5 fw-bold">Você quer entender melhor se precisa dos meus serviços?<br>
+  <p class="text-center fs-5 mx-2 my-4">Você quer entender melhor se precisa dos meus serviços?<br>
 
     Preparei algumas ferramentas que podem lhe auxiliar.
     </p>
@@ -312,28 +327,6 @@
     </div>
     <button class="btn btn-primary next-btn">Próxima</button>
 </div>
-<div class="carousel-item getContato">
-  <div class="question">Informe os seus dados de contato para enviarmos uma cópia dos resultados.</div>
-  <div class="options text-start">
-    <div class="d-flex flex-column">
-      <div class="mt-2">
-      <label for="valor1">Infome seu nome.</label>  
-      <input type="text" id="quiznome" class="form-control border" placeholder="R$">
-    </div>
-    <div class="mt-2">
-      <label for="valor2">Informe seu telefone.</label>  
-      <input type="number" id="quiztel" class="form-control border" placeholder="R$">
-    </div>
-      <div class="mt-2">
-      <label for="valor1">Informe seu email.</label>  
-      <input type="email" id="quizemail" class="form-control border">
-      
-    </div>
-    
-  </div>
-  </div>
-  <button class="btn btn-primary next-btn">Próxima</button>
-</div>
             
                 <!-- Adicione mais perguntas seguindo o mesmo padrão -->
                 <!-- ... -->
@@ -356,53 +349,47 @@
    
     <!-- Seção ferramentas -->
     <section id="ferramentas" class="container-fluid py-5 text-center bg-light ">
-    
-
-  <div class="container mt-5">
-    <h1 class="my-3"><img src="simulador.png">Simuladores:</h1>
-    <p>Planejar o futuro financeiro é essencial para alcançar seus objetivos. Utilize nossas ferramentas para simular diferentes cenários e planejar o seu futuro.</p>
-    <div class="accordion" id="accordionExample">
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-            Simulador de Acúmulo de Riquesa
-          </button>
-        </h2>
-        <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            <div class="d-flex justify-content-around p-3">
+    <div class="container mt-5">
+      <h1>Simuladores:</h1>
+      <!-- Abas -->
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Simulador de Acúmulo de Riquesa</button>
+          </li>
+          <li class="nav-item" role="presentation">
+              <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Simulador de Renda Passiva</button>
+          </li>
+          <li class="nav-item" role="presentation">
+              <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Simulador de Meta</button>
+          </li>
+      </ul>
+  
+      <!-- Conteúdo das Abas -->
+      <div class="tab-content border border-top-0 rounded-bottom mb-5" id="myTabContent">
+          <div class="tab-pane fade show active py-2 text-center" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <div class="d-flex justify-content-around px-3">
               <div class="d-flex flex-column">
                 <div class="mt-2">
-                <label for="s1valor1">Quanto você consegue contribuir por mês?</label>  
-                <input type="text" id="s1valor1" class="form-control border" placeholder="R$" oninput="atualiza(4)">
-                <input type="range" class="form-range" min="0" max="5000" value="50" step="50" data-bs-toggle="tooltip" data-bs-placement="top" title="Deslize para alterar o valor." id="sai" oninput="atualiza(1)" onchange="atualiza(1)">
+                <label for="valor1">Quanto você consegue contribuir por mês?</label>  
+                <input type="number" id="valor1" class="form-control border" placeholder="R$">
               </div>
               <div class="mt-2">
-                <label for="s1valor2">Você tem algum valor para começar?</label>  
-                <input type="text" id="s1valor2" class="form-control border" placeholder="R$" oninput="atualiza(5)">
-                <input type="range" class="form-range" min="0" max="50000" value="0" step="100" data-bs-toggle="tooltip" data-bs-placement="top" title="Deslize para alterar o valor." id="sai2" oninput="atualiza(2)" onchange="atualiza(2)">
+                <label for="valor2">Você tem algum valor para começar?</label>  
+                <input type="number" id="valor2" class="form-control border" placeholder="R$">
               </div>
                 <div class="mt-2">
-                <label for="s1valor3">Por quantos anos você planeja juntar?</label>  
-                <input type="number" id="s1valor3" class="form-control border">
-                <input type="range" class="form-range" min="0" max="50" value="0" step="1" data-bs-toggle="tooltip" data-bs-placement="top" title="Deslize para alterar o valor." id="sai3" oninput="atualiza(3)" onchange="atualiza(3)">
+                <label for="valor1">Por quantos anos você planeja juntar?</label>  
+                <input type="number" id="valor3" class="form-control border">
                 
               </div>
               <a class="btn btn-primary mt-3">Calcular</a>
             </div>
             </div>
+            
+          
           </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-            Simulador de Renda Passiva
-          </button>
-        </h2>
-        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            <div class="d-flex justify-content-around p-3">
+          <div class="tab-pane fade py-2 text-center" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+            <div class="d-flex justify-content-around px-3">
               <div class="d-flex flex-column">
                 <div class="mt-2">
                 <label for="valor1">Quanto você quer ganhar por mês?</label>  
@@ -412,18 +399,10 @@
               <a class="btn btn-primary mt-3">Calcular</a>
             </div>
             </div>
+            
           </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-            Simulador de Meta
-          </button>
-        </h2>
-        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            <div class="d-flex justify-content-around p-3">
+          <div class="tab-pane fade py-2 text-center" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+            <div class="d-flex justify-content-around px-3">
               <div class="d-flex flex-column">
                 <div class="mt-2">
                 <label for="valor1">Quanto você quer acumular?</label>  
@@ -434,16 +413,14 @@
             </div>
             </div>
           </div>
-        </div>
       </div>
-    </div>
   </div>
     </section>
     
     <!-- Rodapé -->
     <footer class="bg-dark text-white text-center py-3">
       <div class="d-flex justify-content-center align-items-center mb-3">
-        <span class="mx-3">VELASQUES CONSULTORIA DE INVESTIMENTOS E SEGUROS</span>
+        <i class="bi bi-shield-shaded text-danger mx-2 fs-5"></i><span>RVP Consultoria</span>
       </div>
       <div class="d-flex justify-content-center">
         <i class="bi bi-telephone mx-2"></i><span>21 - 98500-4198</span>
@@ -463,68 +440,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="scripts.js"></script>
     <script>
-      function atualiza(tipo) {
-        switch (tipo) {
-            case 1:
-                var sai = parseInt(document.getElementById("sai").value);
-                var saif = sai.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
-                document.getElementById("s1valor1").value = saif;
-                break;
-            case 2:
-            var sai2 = parseInt(document.getElementById("sai2").value);
-            var saif2 = sai2.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
-            document.getElementById("s1valor2").value = saif2;
-                
-                break;
-            case 3:
-    
-            var sai3 = parseInt(document.getElementById("sai3").value);
-            
-            document.getElementById("s1valor3").value = sai3;
-                
-                break;
-            case 4:
-              let valor1 =  document.getElementById("s1valor1").value;
-              valor1 = valor1.replace(/\D/g, '');
-              valor1 = new Intl.NumberFormat('pt-BR', {
-                style: 'currency',
-                currency: 'BRL'
-              }).format(valor1 / 100);
-              document.getElementById("s1valor1").value = valor1
-                break;
-            case 5:
-            let valor2 =  document.getElementById("s1valor2").value;
-            valor2 = valor2.replace(/\D/g, '');
-            valor2 = new Intl.NumberFormat('pt-BR', {
-              style: 'currency',
-              currency: 'BRL'
-            }).format(valor2 / 100);
-            document.getElementById("s1valor2").value = valor2
-              break;
-               
-                break;
-            case 6:
-                var sai1 = parseInt(document.getElementById("sai1").value);
-                var sai1f = sai1.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
-                document.getElementById("apini").value = sai1f;
-                break;
-            case 7:
-                var scm1 = parseInt(document.getElementById("scm1").value);
-                var scm1f = scm1.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
-                document.getElementById("apmen").value = scm1f;
-                break;
-            case 8:
-                var srt1 = parseInt(document.getElementById("srt1").value);
-    
-                document.getElementById("rta").value = srt1 + "%";
-                break;
-    
-            default:
-                pass;
-        }
-    
-    
-    }
+        // set up text to print, each item in array is new line
 
 
     </script>
@@ -542,27 +458,13 @@
                   const activeItem = document.querySelector('.carousel-item.active');
                   const selectedOption = activeItem.querySelector('input[type="radio"]:checked');
 
-                  
-                  if (activeItem.classList.contains('getContato')){
-                    console.log("teste");
-                    const nome = document.getElementById('quiznome').value.trim();
-                    const telefone = document.getElementById('quiztel').value.trim();
-                    const email = document.getElementById('quizemail').value.trim();
-                    if (nome === '' || telefone === '' || email === '') {
-                      alert('Por favor, preencha todos os campos.');
-                    }
-                    else{
-                      carousel.next();
-                    }
-                  }
-                  else{
-                    if (selectedOption) {
+                  if (selectedOption) {
                       totalScore += parseInt(selectedOption.value);
                       carousel.next();
                   } else {
                       alert('Por favor, selecione uma opção antes de continuar.');
                   }
-                  }
+
                   // Se for a última pergunta, mostrar o resultado
                   if (activeItem.nextElementSibling.classList.contains('result')) {
                       let resultMessage = '';
