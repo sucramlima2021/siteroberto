@@ -94,12 +94,11 @@
             <div id="res1" class="card shadow h-100" >
                 <div class="card-body">
                   <h4 class="card-title">Em Investimentos</h4>
-                  <span>Um crescimento médio de <span class="fw-bold">18%</span> ao ano.<br></span>
+                  <span>Um crescimento médio de <span class="fw-bold">16%</span> ao ano.<br></span>
                   <span>O que significa: o cliente dobrar o patrimônio entre 5-6 anos.</span>
                   <canvas id="canvasId" aria-label="chart" class="border my-3"></canvas>
-                  <p class="mb-2 fw-lighter fst-italic text-start">O gráfico ilustrativo demonstra a evolução de um investimento no valor de R$ 1.000,00 x a poupança do mesmo período. 
-                    <br>
-                    Ressalva: Rentabilidade passada não é promessa de resultado futuro.
+                  <p class="mb-2 fw-lighter fst-italic text-start">
+                    1- Os valores aqui apresentados são uma projeção e não garantia de resultados futuros. 2- Todas as simulações realizadas aqui não são vinculadas a nenhuma promessa ou proposta de qualquer resultado de qualquer produto. 3- Rentabilidade passada não representa garantia de rentabilidade futura. 4- A rentabilidade divulgada não é líquida de impostos. 5- Essa simulação não é endossada, criada ou disponibilizada por nenhuma seguradora, corretora de valores ou órgão regulador ou semelhante. 6- Todo e qualquer produto de previdência privada ou de investimentos possui um prospecto com regras e política de investimento, consulte antes de contratar. Documentos disponíveis em https://www.gov.br/cvm/pt-br
                     </p>
                   
                 </div>
@@ -110,11 +109,12 @@
                 <div class="card-body">
                   <h4 class="card-title">Em seguros</h4>
                   <div class="d-flex flex-column fonte text-center ">
-                    <div class="d-flex align-items-center my-2"><img src="seguros.png" class="img-fluid"><p>Mais de R$ <span class="fs-1 fw-bold" id="valor-protecao">0</span>,00 em proteção de produtos de vida e demais outros produtos.</p></div>
+                    <div class="d-flex flex-column align-items-center my-2"><img src="seguros.png" class="img-fluid"><p>Mais de R$ <span class="fs-1 fw-bold" id="valor-protecao">0</span>,00 em proteção de produtos de vida e demais outros produtos.</p></div>
                     
-                    <div class="d-flex align-items-end justify-content-end my-2">
-                    <p class="mx-3">Mais de <span class="fs-1 fw-bold" id="familias-indenizadas">0</span> famílias / pessoas indenizadas.</p>
-                    <img src="familia.png" class="img-fluid">
+                    <div class="d-flex flex-column align-items-center mt-5 mb-2">
+                      <img src="familia.png" class="img-fluid">
+                      <p class="mx-3">Mais de <span class="fs-1 fw-bold" id="familias-indenizadas">0</span> famílias / pessoas indenizadas.</p>
+                    
                   </div>      
                   </div>
                     </div>
@@ -168,7 +168,7 @@
         </div>
       </div>
       </div>
-      <div class="col-md-6 col-sm-12 mt-1">
+      <div class="col-md-6 col-sm-12 mt-3">
         <div class="card shadow" style="background-color: rgb(243, 241, 240);">
           <div class="card-body">
             <h5 class="card-title" style="color: rgb(0, 41, 96)"><i class="bi bi-shield fs-1"></i> Corretagem de Seguros</h5>
@@ -318,11 +318,11 @@
     <div class="d-flex flex-column">
       <div class="mt-2">
       <label for="valor1">Infome seu nome.</label>  
-      <input type="text" id="quiznome" class="form-control border" placeholder="R$">
+      <input type="text" id="quiznome" class="form-control border">
     </div>
     <div class="mt-2">
       <label for="valor2">Informe seu telefone.</label>  
-      <input type="number" id="quiztel" class="form-control border" placeholder="R$">
+      <input type="number" id="quiztel" class="form-control border">
     </div>
       <div class="mt-2">
       <label for="valor1">Informe seu email.</label>  
@@ -365,7 +365,7 @@
       <div class="accordion-item">
         <h2 class="accordion-header">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-            Simulador de Acúmulo de Riquesa
+            Simulador de Acúmulo de Riqueza
           </button>
         </h2>
         <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
@@ -405,8 +405,9 @@
             <div class="d-flex justify-content-around p-3">
               <div class="d-flex flex-column">
                 <div class="mt-2">
-                <label for="valor1">Quanto você quer ganhar por mês?</label>  
-                <input type="number" id="valor1" class="form-control" placeholder="R$">
+                <label for="s2valor1">Quanto você quer ganhar por mês?</label>  
+                <input type="text" id="s2valor1" class="form-control" placeholder="R$" oninput="atualiza(7)">
+                <input type="range" class="form-range" min="0" max="20000" value="0" step="500" data-bs-toggle="tooltip" data-bs-placement="top" title="Deslize para alterar o valor." id="sai4" oninput="atualiza(6)" onchange="atualiza(6)">
               </div>
               
               <a class="btn btn-primary mt-3">Calcular</a>
@@ -426,8 +427,9 @@
             <div class="d-flex justify-content-around p-3">
               <div class="d-flex flex-column">
                 <div class="mt-2">
-                <label for="valor1">Quanto você quer acumular?</label>  
-                <input type="number" id="valor1" class="form-control" placeholder="R$">
+                <label for="s3valor1">Quanto você quer acumular?</label>  
+                <input type="text" id="s3valor1" class="form-control" placeholder="R$" oninput="atualiza(9)">
+                <input type="range" class="form-range" min="0" max="500000" value="0" step="1000" data-bs-toggle="tooltip" data-bs-placement="top" title="Deslize para alterar o valor." id="sai5" oninput="atualiza(8)" onchange="atualiza(8)">
               </div>
               
               <a class="btn btn-primary mt-3">Calcular</a>
@@ -477,9 +479,7 @@
                 
                 break;
             case 3:
-    
             var sai3 = parseInt(document.getElementById("sai3").value);
-            
             document.getElementById("s1valor3").value = sai3;
                 
                 break;
@@ -502,22 +502,35 @@
             document.getElementById("s1valor2").value = valor2
               break;
                
-                break;
             case 6:
-                var sai1 = parseInt(document.getElementById("sai1").value);
-                var sai1f = sai1.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
-                document.getElementById("apini").value = sai1f;
+                var sai4 = parseInt(document.getElementById("sai4").value);
+                var sai4f = sai4.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+                document.getElementById("s2valor1").value = sai4f;
                 break;
             case 7:
-                var scm1 = parseInt(document.getElementById("scm1").value);
-                var scm1f = scm1.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
-                document.getElementById("apmen").value = scm1f;
-                break;
+            let valor3 =  document.getElementById("s2valor1").value;
+            valor3 = valor3.replace(/\D/g, '');
+            valor3 = new Intl.NumberFormat('pt-BR', {
+              style: 'currency',
+              currency: 'BRL'
+            }).format(valor3 / 100);
+            document.getElementById("s2valor1").value = valor3
+              break;
             case 8:
-                var srt1 = parseInt(document.getElementById("srt1").value);
-    
-                document.getElementById("rta").value = srt1 + "%";
-                break;
+            var sai5 = parseInt(document.getElementById("sai5").value);
+            var sai5f = sai5.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+            document.getElementById("s3valor1").value = sai5f;
+            break;
+            
+            case 9:
+            let valor4 =  document.getElementById("s3valor1").value;
+            valor4 = valor4.replace(/\D/g, '');
+            valor4 = new Intl.NumberFormat('pt-BR', {
+              style: 'currency',
+              currency: 'BRL'
+            }).format(valor4 / 100);
+            document.getElementById("s3valor1").value = valor4
+              break;
     
             default:
                 pass;
@@ -576,7 +589,8 @@
                                           <p class="text-start">Você tem uma vida financeira equilibrada. Mesmo que esteja tudo em dia, o ideal não é viver Receita = Despesa. Você precisa quebrar esse ciclo e começar a poupar.<br>
                                           Você tem uma “torneira” aberta que está lhe apertando. Veja se é possível antecipar alguma dívida com desconto, se alguma compra parcelada já está se encerrando e evite despesas desnecessárias.<br<
                                           Você não precisa deixar de consumir ou sair, mas sim, fazer de forma mais consciente.<br>
-                                          Essas pequenas atitudes vão fazer toda a diferença para você começar a poupar algum valor e avançar para o próximo estágio: guarda dinheiro para imprevistos e posteriormente para investir.</p>`;
+                                          Essas pequenas atitudes vão fazer toda a diferença para você começar a poupar algum valor e avançar para o próximo estágio: guarda dinheiro para imprevistos e posteriormente para investir.<br>
+                                        Um bom profissional pode lhe orientar como aumentar o seu retorno, diminuir os seus riscos e proteger o seu patrimônio com produtos efetivos.</p>`;
                       } else {
                           resultMessage = `<span class="fs-5 fw-bold">Endividado ou Apertado</span><br><br>
                           <p class="text-start">Sua situação é delicada, você pode estar inadimplente ou muito próximo disso. <br>
@@ -587,7 +601,8 @@
                           Bancos e financeiras: é importante procurá-los e negociar um novo prazo e uma parcela que caiba no seu bolso.<br>
                           O seu nome precisa ficar limpo.<br>
                           É bom para você e é bom para o credor mostrar a iniciativa que tem o interesse em resolver o problema. <br>
-                          Podem ocorrer alguns sacrifícios, mas o seu “eu” futuro vai agradecer.</p>`;
+                          Podem ocorrer alguns sacrifícios, mas o seu “eu” futuro vai agradecer.<br>
+                        Um bom profissional pode lhe orientar como aumentar o seu retorno, diminuir os seus riscos e proteger o seu patrimônio com produtos efetivos.</p>`;
                       }
                       resultPontos.innerHTML = `Sua pontuação é <span class="fs-5 fw-bold">${totalScore}</span>.`;
                       resultText.innerHTML = resultMessage;

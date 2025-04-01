@@ -41,7 +41,7 @@ let chartObj = new Chart(tip, {
 		labels: ["0", "Ano 1", "Ano 2", "Ano 3", "Ano 4", "Ano 5"],
 		datasets: [{
 			label: "Cliente",
-			data: [1000, 1180, 1392, 1642, 1938, 2287],
+			data: [1000, 1160, 1345, 1560, 1809, 2098],
 			backgroundColor: ['coral'],
 			borderColor: ["black"],
 			borderWidth: 1,
@@ -94,7 +94,7 @@ let chartObj = new Chart(tip, {
 		scales: {
 			y: {
 				min: 1000,
-				max: 2500,
+				max: 2200,
 			}
 		}
 	}
