@@ -46,7 +46,7 @@
                 <img src="logo_azul.png" class="img-fluid" style="max-width: 100px;">
                 <span class="fonte4" style="font-size: 60px; color: rgb(0, 41, 96);">VELASQUES</span>
                 <span style="margin-top: -20px; color: rgb(0, 41, 96);">CONSULTORIA DE INVESTIMENTOS E SEGUROS</span></div>
-              <div class="d-flex fs-6 fonte3 mx-5 my-5">
+              <div class="d-flex fs-5 fonte3 mx-5 my-5">
                 <p>Minha proposta é transformar a sua vida financeira, para que você viva o presente, invista para o futuro e proteja suas conquistas.</p>
               </div>         
               <div class="d-flex ">
@@ -176,7 +176,7 @@
               <div class="accordion-item">
                 <h2 class="accordion-header">
                   <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne2" aria-expanded="true" aria-controls="collapseOne2">
-                    A Corretagem de Seguros é um serviço de venda de seguros. A remuneração é através de comissão já embutida no produto.
+                    <span class="pb-3">A Corretagem de Seguros é um serviço de venda de seguros. A remuneração é através de comissão já embutida no produto.</span>
                   </button>
                 </h2>
                 <div id="collapseOne2" class="accordion-collapse collapse" data-bs-parent="#accordionExample2">
@@ -583,14 +583,14 @@
                           resultMessage = `<span class="fs-5 fw-bold">Potencial Investidor ou Investidor</span><br><br>
                                           <p class="text-start">Parabéns, você é uma das poucas pessoas que alcança essa pontuação!<br>
                                           Você tem uma boa organização financeira, já deve ter uma reserva de emergência, além de conseguir investir pensando no seu futuro. Também compreende que o ato de se proteger anda em conjunto o de investir.<br>
-                                          Um bom profissional pode lhe orientar como aumentar o seu retorno, diminuir os seus riscos e proteger o seu patrimônio com produtos efetivos.</p>`;
+                                          <span class="fw-bold">Um bom profissional pode lhe orientar como aumentar o seu retorno, diminuir os seus riscos e proteger o seu patrimônio com produtos efetivos.</span></p>`;
                       } else if (totalScore >= 45) {
                           resultMessage = `<span class="fs-5 fw-bold">Potencial Poupador ou Poupador</span><br><br>
                                           <p class="text-start">Você tem uma vida financeira equilibrada. Mesmo que esteja tudo em dia, o ideal não é viver Receita = Despesa. Você precisa quebrar esse ciclo e começar a poupar.<br>
                                           Você tem uma “torneira” aberta que está lhe apertando. Veja se é possível antecipar alguma dívida com desconto, se alguma compra parcelada já está se encerrando e evite despesas desnecessárias.<br<
                                           Você não precisa deixar de consumir ou sair, mas sim, fazer de forma mais consciente.<br>
                                           Essas pequenas atitudes vão fazer toda a diferença para você começar a poupar algum valor e avançar para o próximo estágio: guarda dinheiro para imprevistos e posteriormente para investir.<br>
-                                        Um bom profissional pode lhe orientar como aumentar o seu retorno, diminuir os seus riscos e proteger o seu patrimônio com produtos efetivos.</p>`;
+                                        <span class="fw-bold">Um bom profissional pode lhe orientar como aumentar o seu retorno, diminuir os seus riscos e proteger o seu patrimônio com produtos efetivos.</span></p>`;
                       } else {
                           resultMessage = `<span class="fs-5 fw-bold">Endividado ou Apertado</span><br><br>
                           <p class="text-start">Sua situação é delicada, você pode estar inadimplente ou muito próximo disso. <br>
@@ -602,7 +602,7 @@
                           O seu nome precisa ficar limpo.<br>
                           É bom para você e é bom para o credor mostrar a iniciativa que tem o interesse em resolver o problema. <br>
                           Podem ocorrer alguns sacrifícios, mas o seu “eu” futuro vai agradecer.<br>
-                        Um bom profissional pode lhe orientar como aumentar o seu retorno, diminuir os seus riscos e proteger o seu patrimônio com produtos efetivos.</p>`;
+                        <span class="fw-bold">Um bom profissional pode lhe orientar como aumentar o seu retorno, diminuir os seus riscos e proteger o seu patrimônio com produtos efetivos.</span></p>`;
                       }
                       resultPontos.innerHTML = `Sua pontuação é <span class="fs-5 fw-bold">${totalScore}</span>.`;
                       resultText.innerHTML = resultMessage;
