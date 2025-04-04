@@ -1,4 +1,6 @@
-
+const carousel1 = new bootstrap.Carousel(document.getElementById('sarCarousel'));
+const carousel2 = new bootstrap.Carousel(document.getElementById('srpCarousel'));
+const carousel3 = new bootstrap.Carousel(document.getElementById('smCarousel'));
 var aText = new Array(
 	"“Minha proposta é transformar a sua vida financeira, para que você viva o presente, invista para o futuro e proteja suas conquistas.”"
 	);
@@ -161,3 +163,82 @@ document.addEventListener("DOMContentLoaded", function() {
 		observer.observe(section2);
 
 	});
+
+function acumulo_riquesa(){
+	
+	var s1valor1 = cpn(document.getElementById("s1valor1").value);
+	var s1valor2 = cpn(document.getElementById("s1valor2").value);
+	var s1valor3 = parseInt(document.getElementById("s1valor3").value)*12;
+	const im = (1 + (10/100))**(1/12) - 1;
+	const fv_inicial = s1valor2 * (1 + im)**s1valor3;
+	const fv_aportes = s1valor1 * [((1 + im)**s1valor3 - 1) / im];
+	const total = fv_aportes+fv_inicial;
+	const renda = total*im;
+	carousel1.next();
+	document.getElementById("sarResult").innerHTML = moeda(renda);
+	document.getElementById("sarAcumulado").innerHTML = moeda(total);
+
+	
+}
+
+function renda_passiva(){
+	
+	var s2valor1 = cpn(document.getElementById("s2valor1").value);
+	const im = (1 + (10/100))**(1/12) - 1;
+	const total = s2valor1 / im;
+	const dez = total * im / ((1 + im)**120 - 1)
+	const vinte = total * im / ((1 + im)**240 - 1)
+	const trinta = total * im / ((1 + im)**360 - 1)
+	carousel2.next();
+	document.getElementById("srpmens").innerHTML = document.getElementById("s2valor1").value;
+	document.getElementById("srpResult").innerHTML = moeda(total);
+	document.getElementById("srp10").innerHTML = moeda(dez);
+	document.getElementById("srp20").innerHTML = moeda(vinte);
+	document.getElementById("srp30").innerHTML = moeda(trinta);
+
+	
+}
+function meta(){
+	
+	const total = cpn(document.getElementById("s3valor1").value);
+	const im = (1 + (10/100))**(1/12) - 1;
+	const dez = total * im / ((1 + im)**120 - 1)
+	const vinte = total * im / ((1 + im)**240 - 1)
+	const trinta = total * im / ((1 + im)**360 - 1)
+	carousel3.next();
+	document.getElementById("smResult").innerHTML = moeda(total);
+	document.getElementById("sm10").innerHTML = moeda(dez);
+	document.getElementById("sm20").innerHTML = moeda(vinte);
+	document.getElementById("sm30").innerHTML = moeda(trinta);
+
+	
+}
+function refaz(n){
+	switch (n){
+		case 1:
+			carousel1.prev();
+			break;
+		case 2:
+			carousel2.prev();
+			break;
+		case 3:
+			carousel3.prev();
+			break;
+		default:
+            pass;
+	}
+
+}
+
+function cpn(valorEmString) {
+	const num = parseFloat(valorEmString.replace("R$","").replace(/\./g,"").replace(",","."));
+	return num;
+  }
+function moeda(numero) {
+	const formatter = new Intl.NumberFormat('pt-BR', {
+	  style: 'currency',
+	  currency: 'BRL'
+	});
+  
+	return formatter.format(numero);
+}

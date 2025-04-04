@@ -370,6 +370,10 @@
         </h2>
         <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
           <div class="accordion-body">
+            <div id="sarCarousel" class="carousel slide" data-bs-touch="false">
+              <div class="carousel-inner">
+                  <!-- Pergunta 1 -->
+                  <div class="carousel-item active">
             <div class="d-flex justify-content-around p-3">
               <div class="d-flex flex-column">
                 <div class="mt-2">
@@ -388,7 +392,19 @@
                 <input type="range" class="form-range" min="0" max="50" value="0" step="1" data-bs-toggle="tooltip" data-bs-placement="top" title="Deslize para alterar o valor." id="sai3" oninput="atualiza(3)" onchange="atualiza(3)">
                 
               </div>
-              <a class="btn btn-primary mt-3">Calcular</a>
+              <a class="btn btn-primary mt-3" onclick="acumulo_riquesa()">Calcular</a>
+            </div>
+            </div>
+            </div>
+            <div class="carousel-item">
+              <div class="d-flex flex-column p-3">
+                <h3>Resultado:</h1> 
+                  <h6>O total acumulado para o período é <span id="sarAcumulado" class="fs-5 fw-bold"></span>.</h6>
+                  <h6>Este valor gera uma renda passiva de <span id="sarResult" class="fs-5 fw-bold"></span> por mês.</h6>
+                  <span style="font-size: smaller;">Esta simulação leva em conta uma taxa de juros estimada de 10% ao ano.</span>
+                  <div><a class="btn btn-primary my-3 px-5" onclick="refaz(1)">Voltar</a></div>
+              </div>
+              </div>
             </div>
             </div>
           </div>
@@ -402,6 +418,10 @@
         </h2>
         <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
           <div class="accordion-body">
+            <div id="srpCarousel" class="carousel slide" data-bs-touch="false">
+              <div class="carousel-inner">
+                  <!-- Pergunta 1 -->
+                  <div class="carousel-item active">
             <div class="d-flex justify-content-around p-3">
               <div class="d-flex flex-column">
                 <div class="mt-2">
@@ -410,9 +430,26 @@
                 <input type="range" class="form-range" min="0" max="20000" value="0" step="500" data-bs-toggle="tooltip" data-bs-placement="top" title="Deslize para alterar o valor." id="sai4" oninput="atualiza(6)" onchange="atualiza(6)">
               </div>
               
-              <a class="btn btn-primary mt-3">Calcular</a>
+              <a class="btn btn-primary mt-3" onclick="renda_passiva()">Calcular</a>
             </div>
             </div>
+            </div>
+            <div class="carousel-item">
+              <div class="d-flex flex-column align-items-center">
+                <h3>Resultado:</h1> 
+                  <h6>O total acumulado necessário para ter uma renda mensal  de <span id="srpmens"></span> é <span id="srpResult" class="fs-5 fw-bold"></span>.</h6>
+                  <h6>Para atingir este valor você deve aportar: </h6>
+                    
+                      <p>Por 10 Anos o valor de <span id="srp10" class="fs-5 fw-bold"></span> /mês.</p>
+                      <p>Por 20 Anos o valor de <span id="srp20" class="fs-5 fw-bold"></span> /mês.</p>
+                      <p>Por 30 Anos o valor de <span id="srp30" class="fs-5 fw-bold"></span> /mês.</p>
+                  
+                  <span style="font-size: smaller;">Esta simulação leva em conta uma taxa de juros estimada de 10% ao ano.</span>
+                  <div><a class="btn btn-primary my-3 px-5" onclick="refaz(2)">Voltar</a></div>
+              </div>
+              </div>
+          </div>
+          </div>
           </div>
         </div>
       </div>
@@ -424,6 +461,10 @@
         </h2>
         <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
           <div class="accordion-body">
+            <div id="smCarousel" class="carousel slide" data-bs-touch="false">
+              <div class="carousel-inner">
+                  <!-- Pergunta 1 -->
+                  <div class="carousel-item active">
             <div class="d-flex justify-content-around p-3">
               <div class="d-flex flex-column">
                 <div class="mt-2">
@@ -432,7 +473,23 @@
                 <input type="range" class="form-range" min="0" max="500000" value="0" step="1000" data-bs-toggle="tooltip" data-bs-placement="top" title="Deslize para alterar o valor." id="sai5" oninput="atualiza(8)" onchange="atualiza(8)">
               </div>
               
-              <a class="btn btn-primary mt-3">Calcular</a>
+              <a class="btn btn-primary mt-3" onclick="meta()">Calcular</a>
+            </div>
+            </div>
+            </div>
+            <div class="carousel-item">
+              <div class="d-flex flex-column align-items-center">
+                <h3>Resultado:</h1> 
+                  <h6>Para acumular o valor de <span id="smResult"></span> você deve aportar: </h6>
+                    
+                      <p>Por 10 Anos o valor de <span id="sm10" class="fs-5 fw-bold"></span> /mês.</p>
+                      <p>Por 20 Anos o valor de <span id="sm20" class="fs-5 fw-bold"></span> /mês.</p>
+                      <p>Por 30 Anos o valor de <span id="sm30" class="fs-5 fw-bold"></span> /mês.</p>
+                  
+                  <span style="font-size: smaller;">Esta simulação leva em conta uma taxa de juros estimada de 10% ao ano.</span>
+                <div><a class="btn btn-primary my-3 px-5" onclick="refaz(3)">Voltar</a></div>
+              </div>
+              </div>
             </div>
             </div>
           </div>
@@ -557,7 +614,6 @@
 
                   
                   if (activeItem.classList.contains('getContato')){
-                    console.log("teste");
                     const nome = document.getElementById('quiznome').value.trim();
                     const telefone = document.getElementById('quiztel').value.trim();
                     const email = document.getElementById('quizemail').value.trim();
