@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Consultoria Financeira</title>
+  <link rel="stylesheet" href="estilos/styles2.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <div class="d-flex flex-row justify-content-center" style="background-color: rgb(230, 224, 216);">
+
+    <nav class="navbar navbar-expand-lg w-100 justify-content-between mx-3">
+
+      <a href="#"><img src="imagens/logo_aful.png" width="70px" class="img-fluid"> </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item "><a class="nav-link" href="#proposta">Proposta</a></li>
+          <li class="nav-item "><a class="nav-link " href="#quem-sou">Quem Sou</a></li>
+          <li class="nav-item "><a class="nav-link " href="#resultados">Resultados</a></li>
+          <li class="nav-item "><a class="nav-link " href="#servicos">Serviços</a></li>
+          <li class="nav-item "><a class="nav-link " href="#quiz">Quiz</a></li>
+          <li class="nav-item "><a class="nav-link " href="#ferramentas">Simuladores</a></li>
+        </ul>
+      </div>
+
+    </nav>
+
+  </div>
+
+  <!-- Hero Section -->
+  <section id="proposta" class="d-flex backprinc altura">
+    <div id="princ" class="col-md-7 col-sm-12 ">
+
+      <div class="d-flex flex-column h-100 align-items-center justify-content-center text-center ">
+        <div class="d-flex flex-column align-items-center">
+          <img src="imagens/logo_azul.png" class="img-fluid" style="max-width: 100px;">
+          <span class="fonte4" style="font-size: 60px; color: rgb(0, 41, 96);">VELASQUES</span>
+          <span style="margin-top: -20px; color: rgb(0, 41, 96);">CONSULTORIA DE INVESTIMENTOS E SEGUROS</span>
+        </div>
+        <div class="d-flex fs-5 fonte3 mx-5 my-5">
+          <p>Minha proposta é transformar a sua vida financeira, para que você viva o presente, invista para o futuro e
+            proteja suas conquistas.</p>
+        </div>
+        <div class="d-flex ">
+          <a class="btn btn-warning fs-6 sombra fonte"
+            href="https://wa.me/552197662349?text=Ol%C3%A1!%20Eu%20gostaria%20de%20agendar%20uma%20consulta%20inicial."
+            target="_blank">Agendar Consulta Inicial Agora</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção Quem Sou -->
+  <section id="quem-sou" class="container-fluid py-5 my-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-4 col-md-4 col-sm-12">
+        <div class="d-flex flex-column h-100 justify-content-center align-items-center">
+          <img src="imagens/pessoa.png"
+            class="img-fluid rounded-circle shadow-lg border border-dark border-opacity-25 border-3"
+            style="max-width: 300px;">
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12 mt-3">
+        <p><span class="fw-bold">Roberto Velasques Pereira</span> é Consultor de Valores Mobiliários – CVM, Corretor de
+          Seguros – SUSEP, Correspondente Bancário – Febraban, bacharelado em Ciências Econômicas pela Universidade
+          Federal Fluminense – UFF e possui um MBA em Gestão de Seguros e Resseguros e Produtos Financeiros pela Escola
+          de Negócios e Seguros – ENS.</p>
+
+        <p>“Percebi no mercado uma oportunidade: Existem muitos profissionais de investimento, de seguros e de
+          planejamento, mas poucos que possuem conhecimento prático, certificação e estrutura para atender o cliente de
+          forma completa e principalmente de forma independente.”</p>
+        <!--  <div class="d-flex my-2"><i class="bi bi-check-circle-fill text-success mx-1"></i><span> Consultor de Valores Mobiliários (CVM)</span></div>
+                    <div class="d-flex my-2"><i class="bi bi-check-circle-fill text-success mx-1"></i><span> Corretor de Seguros (SUSEP)</span></div>
+                    <div class="d-flex my-2"><i class="bi bi-check-circle-fill text-success mx-1"></i><span> Correspondente Bancário (Febraban)</span></div>
+                    <div class="d-flex my-2"><i class="bi bi-check-circle-fill text-success mx-1"></i><span> Bacharel em Ciências Econômicas pela Universidade Federal Fluminense (UFF)</span></div>
+                    <div class="d-flex my-2"><i class="bi bi-check-circle-fill text-success mx-1"></i><span> MBA em Gestão de Seguros, Resseguros e Produtos Financeiros pela Escola de Negócios e Seguros (ENS)</span></div>
+                  -->
+        <div class="d-flex justify-content-center mt-5">
+          <a class="btn btn-warning shadow"
+            href="https://wa.me/552197662349?text=Ol%C3%A1!%20Eu%20gostaria%20de%20agendar%20uma%20consulta%20inicial."
+            target="_blank">Agendar Consulta Inicial Agora</a>
+
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+
+
+  <!-- Seção Resultados -->
+  <section id="resultados" class="container-fluid py-5 my-5 text-center bg-light ">
+    <h1>Resultados</h1>
+    <div class="row justify-content-center">
+
+      <div class="col-md-6 col-sm-12 mt-1">
+        <div id="res1" class="card shadow h-100">
+          <div class="card-body">
+            <h4 class="card-title">Em Investimentos</h4>
+            <span>Um crescimento médio de <span class="fw-bold">16%</span> ao ano.<br></span>
+            <span>O que significa: o cliente dobrar o patrimônio entre 5-6 anos.</span>
+            <canvas id="canvasId" aria-label="chart" class="border my-3"></canvas>
+            <p class="mb-2 fw-lighter fst-italic text-start">
+              1- Os valores aqui apresentados são uma projeção e não garantia de resultados futuros. 2- Todas as
+              simulações realizadas aqui não são vinculadas a nenhuma promessa ou proposta de qualquer resultado de
+              qualquer produto. 3- Rentabilidade passada não representa garantia de rentabilidade futura. 4- A
+              rentabilidade divulgada não é líquida de impostos. 5- Essa simulação não é endossada, criada ou
+              disponibilizada por nenhuma seguradora, corretora de valores ou órgão regulador ou semelhante. 6- Todo e
+              qualquer produto de previdência privada ou de investimentos possui um prospecto com regras e política de
+              investimento, consulte antes de contratar. Documentos disponíveis em https://www.gov.br/cvm/pt-br
+            </p>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-12 mt-1">
+        <div id="res2" class="card shadow h-100">
+          <div class="card-body">
+            <h4 class="card-title">Em seguros</h4>
+            <div class="d-flex flex-column fonte text-center ">
+              <div class="d-flex flex-column align-items-center my-2"><img src="imagens/seguros.png" class="img-fluid">
+                <p>Mais de R$ <span class="fs-1 fw-bold" id="valor-protecao">0</span>,00 em proteção de produtos de vida
+                  e demais outros produtos.</p>
+              </div>
+
+              <div class="d-flex flex-column align-items-center mt-5 mb-2">
+                <img src="imagens/familia.png" class="img-fluid">
+                <p class="mx-3">Mais de <span class="fs-1 fw-bold" id="familias-indenizadas">0</span> famílias / pessoas
+                  indenizadas.</p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  </section>
+
+  <!-- Seção Serviços -->
+  <section id="servicos" class="py-3 my-5" style="height: 100%; background-color: rgb(0, 41, 96);">
+    <div class="container">
+      <h2 class="text-center" style="color:rgb(243,241,240)">Serviços</h2>
+
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-sm-12 mt-3">
+
+          <div class="card shadow" style="background-color: rgb(243, 241, 240)">
+            <div class="card-body">
+              <h5 class="card-title" style="color: rgb(0, 41, 96)"><i class="bi bi-currency-exchange fs-1"></i>
+                Consultoria de Investimentos</h5>
+              <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      A Consultoria de Investimentos é celebrada através de um contrato entre o consultor e o cliente.
+                      Neste contrato constam valores de remuneração do consultor e os serviços prestados.
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse " data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <span>Serviços da Consultoria de Investimentos:</span>
+                      <ul>
+                        <li>Garantir uma renda mensal.</li>
+                        <li>Reorganizar os investimentos existentes para melhores resultados.</li>
+                        <li>Planejamento de aposentadoria.</li>
+                        <li>Liberdade Financeira.</li>
+                        <li>Herança para filhos/Netos.</li>
+                        <li>Outros</li>
+                      </ul>
+                      <span>Público-alvo: Todos.</span>
+                    </div>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12 mt-3">
+          <div class="card shadow" style="background-color: rgb(243, 241, 240);">
+            <div class="card-body">
+              <h5 class="card-title" style="color: rgb(0, 41, 96)"><i class="bi bi-shield fs-1"></i> Corretagem de
+                Seguros</h5>
+              <div class="accordion" id="accordionExample2">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseOne2" aria-expanded="true" aria-controls="collapseOne2">
+                      <span class="pb-3">A Corretagem de Seguros é um serviço de venda de seguros. A remuneração é
+                        através de comissão já embutida no produto.</span>
+                    </button>
+                  </h2>
+                  <div id="collapseOne2" class="accordion-collapse collapse" data-bs-parent="#accordionExample2">
+                    <div class="accordion-body">
+                      <span>Produtos e Serviços da Corretagem de Seguros:</span>
+                      <ul>
+                        <li>Recursos financeiros em caso de falecimento, doença e/ou invalidez.</li>
+                        <li>Indenização por afastamento do trabalho por doença ou acidente.</li>
+                        <li>Planejamento Sucessório.</li>
+                        <li>Proteção do Profissional em caso de processos: Médico + Profissionais da Saúde, Engenheiro,
+                          Contador, Advogados e outros.</li>
+                        <li>Outros</li>
+                      </ul>
+                      <span>Público-alvo: Todos.</span>
+                    </div>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="d-flex justify-content-center">
+      <a class="btn btn-warning shadow my-4"
+        href="https://wa.me/552197662349?text=Ol%C3%A1!%20Eu%20gostaria%20de%20agendar%20uma%20consulta%20inicial."
+        target="_blank">Agendar Consulta Inicial Agora</a>
+
+    </div>
+  </section>
+  <p class="text-center mx-2 my-5 fw-bold">Você quer entender melhor se precisa dos meus serviços?<br>
+
+    Preparei algumas ferramentas que podem lhe auxiliar.
+  </p>
+  <!-- Seção Quiz -->
+  <section id="quiz" class="container-fluid py-5 text-center  text-white" style="background-color: rgb(170, 120, 54);">
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-sm-12">
+        <h1 class="text-center"><img src="imagens/quiz.png"> Quiz</h1>
+        <h3>Qual é o seu momento?</h3>
+        <p>Respona a 10 perguntas para saber qual é o seu momento financeiro.</p>
+        <div id="quizCarousel" class="carousel slide border rounded bg-light text-dark">
+          <div class="carousel-inner">
+            <!-- Pergunta 1 -->
+            <div class="carousel-item active">
+              <div class="question">1. A sua renda é o suficiente para pagar as suas contas? <br>(Controle de Gastos R –
+                D)</div>
+              <div class="options text-start">
+                <label><input type="radio" name="q1" value="10"> a) Sim e sobra até 20% todo mês.</label>
+                <label><input type="radio" name="q1" value="5"> b) Sim, mas não sobra nada.</label>
+                <label><input type="radio" name="q1" value="0"> c) Não e uso muito o cartão de crédito.</label>
+              </div>
+              <button class="btn btn-primary next-btn">Próxima</button>
+            </div>
+            <!-- Pergunta 2 -->
+            <div class="carousel-item">
+              <div class="question">2. Você anota os seus gastos? <br>(Organização financeira)</div>
+              <div class="options text-start">
+                <label><input type="radio" name="q2" value="10"> a) Sim, todos eles.</label>
+                <label><input type="radio" name="q2" value="5"> b) Alguns, principalmente os parcelados.</label>
+                <label><input type="radio" name="q2" value="0"> c) Não, apenas pago as contas e a fatura do
+                  cartão.</label>
+              </div>
+              <button class="btn btn-primary next-btn">Próxima</button>
+            </div>
+            <div class="carousel-item">
+              <div class="question">3. Você já parcelou cartão de crédito? <br>(Uso de ferramenta Financeira)</div>
+              <div class="options text-start">
+                <label><input type="radio" name="q3" value="10"> a) Nunca.</label>
+                <label><input type="radio" name="q3" value="5"> b) Algumas vezes por causa de emergências.</label>
+                <label><input type="radio" name="q3" value="0"> c) Várias vezes.</label>
+              </div>
+              <button class="btn btn-primary next-btn">Próxima</button>
+            </div>
+            <div class="carousel-item">
+              <div class="question">4. Se hoje você não tivesse nenhuma fonte de renda, por quanto tempo é possível
+                manter o seu padrão de vida atual? <br>(Reserva de Emergência)</div>
+              <div class="options text-start">
+                <label><input type="radio" name="q4" value="10"> a) 1 ano.</label>
+                <label><input type="radio" name="q4" value="5"> b) 6 meses.</label>
+                <label><input type="radio" name="q4" value="0"> c) No máximo 3 meses.</label>
+              </div>
+              <button class="btn btn-primary next-btn">Próxima</button>
+            </div>
+            <div class="carousel-item">
+              <div class="question">5. Você investe, mesmo que na poupança? <br>(Hábito de investir)</div>
+              <div class="options text-start">
+                <label><input type="radio" name="q5" value="10"> a) Sim, invisto todo mês.</label>
+                <label><input type="radio" name="q5" value="5"> b) Sim, mas não é todo mês.</label>
+                <label><input type="radio" name="q5" value="0"> c) Não, pois não sobra nada ou tenho medo.</label>
+              </div>
+              <button class="btn btn-primary next-btn">Próxima</button>
+            </div>
+            <div class="carousel-item">
+              <div class="question">6. Você sabe quanto precisa ter investido para ganhar o seu salário todo mês através
+                de juros? <br>(Noção de juros)</div>
+              <div class="options text-start">
+                <label><input type="radio" name="q6" value="10"> a) Sim.</label>
+                <label><input type="radio" name="q6" value="5"> b) Não.</label>
+                <label><input type="radio" name="q6" value="0"> c) Não invisto.</label>
+              </div>
+              <button class="btn btn-primary next-btn">Próxima</button>
+            </div>
+            <div class="carousel-item">
+              <div class="question">7. Como você planeja a sua renda mensal para aposentadoria? <br>(Pensamento no
+                Futuro)</div>
+              <div class="options text-start">
+                <label><input type="radio" name="q7" value="10"> a) Eu tenho uma previdência privada própria.</label>
+                <label><input type="radio" name="q7" value="5"> b) Contribuo apenas para a previdência social via
+                  carteira de trabalho.</label>
+                <label><input type="radio" name="q7" value="0"> c) Não contribuo para nenhuma.</label>
+              </div>
+              <button class="btn btn-primary next-btn">Próxima</button>
+            </div>
+            <div class="carousel-item">
+              <div class="question">8. Como você aumenta o seu patrimônio? <br>(Crescimento patrimonial)</div>
+              <div class="options text-start">
+                <label><input type="radio" name="q8" value="10"> a) Comprando imóveis e juntando dinheiro.</label>
+                <label><input type="radio" name="q8" value="5"> b) Juntando dinheiro.</label>
+                <label><input type="radio" name="q8" value="0"> c) Herança.</label>
+              </div>
+              <button class="btn btn-primary next-btn">Próxima</button>
+            </div>
+            <div class="carousel-item">
+              <div class="question">9. Na sua falta, como a sua família vai pagar contas? <br>(Gerenciamento de Risco
+                Pessoal)</div>
+              <div class="options text-start">
+                <label><input type="radio" name="q9" value="10"> a) Eu tenho um seguro de vida, assim não vão precisar
+                  pedir empréstimos e nem usar os investimentos.</label>
+                <label><input type="radio" name="q9" value="5"> b) Eu tenho um seguro de vida da empresa, mas não sei se
+                  é o suficiente e sei que vou perde-lo ao me desligar da companhia.</label>
+                <label><input type="radio" name="q9" value="0"> c) Empréstimos, gastar investimentos e vender o
+                  patrimônio.</label>
+              </div>
+              <button class="btn btn-primary next-btn">Próxima</button>
+            </div>
+            <div class="carousel-item">
+              <div class="question">10. Um incêndio atingiu a sua residência, o que você faria para reconstruir tudo e
+                recompor os moveis? <br>(Gerenciamento de Risco Patrimonial)</div>
+              <div class="options text-start">
+                <label><input type="radio" name="q8" value="10"> a) Acionaria o seguro e usaria a indenização para pagar
+                  as despesas, inclusive a mão de obra.</label>
+                <label><input type="radio" name="q8" value="5"> b) Usaria as reservas e os investimentos.</label>
+                <label><input type="radio" name="q8" value="0"> c) Venderia algum bem ou faria um empréstimo.</label>
+              </div>
+              <button class="btn btn-primary next-btn">Próxima</button>
+            </div>
+            <div class="carousel-item getContato">
+              <div class="question">Informe os seus dados de contato para enviarmos uma cópia dos resultados.</div>
+              <div class="options text-start">
+                <div class="d-flex flex-column">
+                  <div class="mt-2">
+                    <label for="valor1">Infome seu nome.</label>
+                    <input type="text" id="quiznome" class="form-control border">
+                  </div>
+                  <div class="mt-2">
+                    <label for="valor2">Informe seu telefone.</label>
+                    <input type="number" id="quiztel" class="form-control border">
+                  </div>
+                  <div class="mt-2">
+                    <label for="valor1">Informe seu email.</label>
+                    <input type="email" id="quizemail" class="form-control border">
+
+                  </div>
+
+                </div>
+              </div>
+              <button class="btn btn-primary next-btn">Próxima</button>
+            </div>
+
+            <!-- Adicione mais perguntas seguindo o mesmo padrão -->
+            <!-- ... -->
+            <!-- Resultado -->
+            <div class="carousel-item result">
+              <h2>Resultado:</h2>
+              <p id="resultPontos"></p>
+              <p id="resultText"></p>
+              <div class="d-flex justify-content-center mt-5">
+                <a class="btn btn-warning shadow"
+                  href="https://wa.me/552197662349?text=Ol%C3%A1!%20Eu%20gostaria%20de%20agendar%20uma%20consulta%20inicial."
+                  target="_blank">Agendar Consulta Inicial Agora</a>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção ferramentas -->
+  <section id="ferramentas" class="container-fluid py-5 text-center bg-light ">
+
+
+    <div class="container mt-5">
+      <h1 class="my-3"><img src="imagens/simulador.png">Simuladores</h1>
+      <p>Planejar o futuro financeiro é essencial para alcançar seus objetivos. Utilize nossas ferramentas para simular
+        diferentes cenários e planejar o seu futuro.</p>
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Simulador de Acúmulo de Riqueza
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <div id="sarCarousel" class="carousel slide" data-bs-touch="false">
+                <div class="carousel-inner">
+                  <!-- Pergunta 1 -->
+                  <div class="carousel-item active">
+                    <div class="d-flex justify-content-around">
+                      <div class="d-flex flex-column">
+                        <div class="mt-2">
+                          <label for="s1valor1">Quanto você consegue contribuir por mês?</label>
+                          <input type="text" id="s1valor1" class="form-control border" placeholder="R$"
+                            oninput="atualiza(4)">
+                          <input type="range" class="form-range" min="0" max="5000" value="50" step="50"
+                            data-bs-toggle="tooltip" data-bs-placement="top" title="Deslize para alterar o valor."
+                            id="sai" oninput="atualiza(1)" onchange="atualiza(1)">
+                        </div>
+                        <div class="mt-2">
+                          <label for="s1valor2">Você tem algum valor para começar?</label>
+                          <input type="text" id="s1valor2" class="form-control border" placeholder="R$"
+                            oninput="atualiza(5)">
+                          <input type="range" class="form-range" min="0" max="50000" value="0" step="100"
+                            data-bs-toggle="tooltip" data-bs-placement="top" title="Deslize para alterar o valor."
+                            id="sai2" oninput="atualiza(2)" onchange="atualiza(2)">
+                        </div>
+                        <div class="mt-2">
+                          <label for="s1valor3">Por quantos anos você planeja juntar?</label>
+                          <input type="number" id="s1valor3" class="form-control border">
+                          <input type="range" class="form-range" min="0" max="50" value="0" step="1"
+                            data-bs-toggle="tooltip" data-bs-placement="top" title="Deslize para alterar o valor."
+                            id="sai3" oninput="atualiza(3)" onchange="atualiza(3)">
+
+                        </div>
+                        <a class="btn btn-primary mt-3" onclick="acumulo_riquesa()">Calcular</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="d-flex flex-column">
+                      <h3>Resultado:</h1>
+                        <h6>O total acumulado para o período é <span id="sarAcumulado" class="fs-5 fw-bold"></span>.
+                        </h6>
+                        <h6>Este valor gera uma renda passiva de <span id="sarResult" class="fs-5 fw-bold"></span> por
+                          mês.</h6>
+                        <span style="font-size: smaller;">Esta simulação leva em conta uma taxa de juros estimada de 10%
+                          ao ano.</span>
+                        <div><a class="btn btn-primary my-3 px-5" onclick="refaz(1)">Voltar</a></div>
+                        <div class="mt-5">
+                          <span>Eu posso te ajudar a chegar neste objetivo.</span>
+                          <a class="btn btn-warning shadow"
+                            href="https://wa.me/552197662349?text=Ol%C3%A1!%20Eu%20gostaria%20de%20agendar%20uma%20consulta%20inicial."
+                            target="_blank">Agendar Consulta Inicial Agora</a>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Simulador de Renda Passiva
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <div id="srpCarousel" class="carousel slide" data-bs-touch="false">
+                <div class="carousel-inner">
+                  <!-- Pergunta 1 -->
+                  <div class="carousel-item active">
+                    <div class="d-flex justify-content-around p-3">
+                      <div class="d-flex flex-column">
+                        <div class="mt-2">
+                          <label for="s2valor1">Quanto você quer ganhar por mês?</label>
+                          <input type="text" id="s2valor1" class="form-control" placeholder="R$" oninput="atualiza(7)">
+                          <input type="range" class="form-range" min="0" max="20000" value="0" step="500"
+                            data-bs-toggle="tooltip" data-bs-placement="top" title="Deslize para alterar o valor."
+                            id="sai4" oninput="atualiza(6)" onchange="atualiza(6)">
+                        </div>
+
+                        <a class="btn btn-primary mt-3" onclick="renda_passiva()">Calcular</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="d-flex flex-column align-items-center">
+                      <h3>Resultado:</h1>
+                        <h6>O total acumulado necessário para ter uma renda mensal de <span id="srpmens"></span> é <span
+                            id="srpResult" class="fs-5 fw-bold"></span>.</h6>
+                        <h6>Para atingir este valor você deve aportar: </h6>
+
+                        <p>Por 10 Anos o valor de <span id="srp10" class="fs-5 fw-bold"></span> /mês.</p>
+                        <p>Por 20 Anos o valor de <span id="srp20" class="fs-5 fw-bold"></span> /mês.</p>
+                        <p>Por 30 Anos o valor de <span id="srp30" class="fs-5 fw-bold"></span> /mês.</p>
+
+                        <span style="font-size: smaller;">Esta simulação leva em conta uma taxa de juros estimada de 10%
+                          ao ano.</span>
+                        <div><a class="btn btn-primary my-3 px-5" onclick="refaz(2)">Voltar</a></div>
+                        <div class="mt-5">
+                          <span>Eu posso te ajudar a chegar neste objetivo.</span>
+                          <a class="btn btn-warning shadow"
+                            href="https://wa.me/552197662349?text=Ol%C3%A1!%20Eu%20gostaria%20de%20agendar%20uma%20consulta%20inicial."
+                            target="_blank">Agendar Consulta Inicial Agora</a>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Simulador de Meta
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <div id="smCarousel" class="carousel slide" data-bs-touch="false">
+                <div class="carousel-inner">
+                  <!-- Pergunta 1 -->
+                  <div class="carousel-item active">
+                    <div class="d-flex justify-content-around p-3">
+                      <div class="d-flex flex-column">
+                        <div class="mt-2">
+                          <label for="s3valor1">Quanto você quer acumular?</label>
+                          <input type="text" id="s3valor1" class="form-control" placeholder="R$" oninput="atualiza(9)">
+                          <input type="range" class="form-range" min="0" max="500000" value="0" step="1000"
+                            data-bs-toggle="tooltip" data-bs-placement="top" title="Deslize para alterar o valor."
+                            id="sai5" oninput="atualiza(8)" onchange="atualiza(8)">
+                        </div>
+
+                        <a class="btn btn-primary mt-3" onclick="meta()">Calcular</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="d-flex flex-column align-items-center">
+                      <h3>Resultado:</h1>
+                        <h6>Para acumular o valor de <span id="smResult"></span> você deve aportar: </h6>
+
+                        <p>Por 10 Anos o valor de <span id="sm10" class="fs-5 fw-bold"></span> /mês.</p>
+                        <p>Por 20 Anos o valor de <span id="sm20" class="fs-5 fw-bold"></span> /mês.</p>
+                        <p>Por 30 Anos o valor de <span id="sm30" class="fs-5 fw-bold"></span> /mês.</p>
+
+                        <span style="font-size: smaller;">Esta simulação leva em conta uma taxa de juros estimada de 10%
+                          ao ano.</span>
+                        <div><a class="btn btn-primary my-3 px-5" onclick="refaz(3)">Voltar</a></div>
+                        <div class="mt-5">
+                          <span>Eu posso te ajudar a chegar neste objetivo.</span>
+                          <a class="btn btn-warning shadow"
+                            href="https://wa.me/552197662349?text=Ol%C3%A1!%20Eu%20gostaria%20de%20agendar%20uma%20consulta%20inicial."
+                            target="_blank">Agendar Consulta Inicial Agora</a>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="bg-dark text-white text-center py-3">
+    <div class="d-flex justify-content-center align-items-center mb-3">
+      <span class="mx-3">VELASQUES CONSULTORIA DE INVESTIMENTOS E SEGUROS</span>
+    </div>
+    <div class="d-flex justify-content-center">
+      <a href="https://wa.me/552197662349?text=Ol%C3%A1!%20Eu%20gostaria%20de%20agendar%20uma%20consulta%20inicial."
+        target="_blank" style="color: white; text-decoration: none;"> <i class="bi bi-telephone mx-2"></i><span>21 -
+          99766-2349</span></a>
+    </div>
+    <div class="d-flex justify-content-center">
+      <i class="bi bi-envelope-at mx-2"></i><span>contato@velasquesconsultoria.com.br</span>
+    </div>
+    <div class="d-flex justify-content-center mb-3">
+      <i class="bi bi-youtube mx-2 fs-3"></i>
+      <i class="bi bi-instagram mx-2 fs-3"></i>
+      <i class="bi bi-facebook mx-2 fs-3"></i>
+      <a href="https://wa.me/552197662349?text=Ol%C3%A1!%20Eu%20gostaria%20de%20agendar%20uma%20consulta%20inicial."
+        target="_blank" style="color: white;"><i class="bi bi-whatsapp mx-2 fs-3"></i></a>
+    </div>
+    <p>&copy; 2025 Velasques Consultoria. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="javascript/scripts.js"></script>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const carousel = new bootstrap.Carousel(document.getElementById('quizCarousel'));
+      const nextButtons = document.querySelectorAll('.next-btn');
+      const resultText = document.getElementById('resultText');
+      const resultPontos = document.getElementById('resultPontos');
+      let totalScore = 0;
+
+
+      nextButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          const activeItem = document.querySelector('.carousel-item.active');
+          const selectedOption = activeItem.querySelector('input[type="radio"]:checked');
+
+
+          if (activeItem.classList.contains('getContato')) {
+            const nome = document.getElementById('quiznome').value.trim();
+            const telefone = document.getElementById('quiztel').value.trim();
+            const email = document.getElementById('quizemail').value.trim();
+            if (nome === '' || telefone === '' || email === '') {
+              alert('Por favor, preencha todos os campos.');
+            }
+            else {
+              carousel.next();
+            }
+          }
+          else {
+            if (selectedOption) {
+              totalScore += parseInt(selectedOption.value);
+              carousel.next();
+            } else {
+              alert('Por favor, selecione uma opção antes de continuar.');
+            }
+          }
+          // Se for a última pergunta, mostrar o resultado
+          if (activeItem.nextElementSibling.classList.contains('result')) {
+            let resultMessage = '';
+            if (totalScore >= 70) {
+              resultMessage = `<span class="fs-5 fw-bold">Potencial Investidor ou Investidor</span><br><br>
+                                          <p class="text-start">Parabéns, você é uma das poucas pessoas que alcança essa pontuação!<br>
+                                          Você tem uma boa organização financeira, já deve ter uma reserva de emergência, além de conseguir investir pensando no seu futuro. Também compreende que o ato de se proteger anda em conjunto o de investir.<br>
+                                          <span class="fw-bold">Um bom profissional pode lhe orientar como aumentar o seu retorno, diminuir os seus riscos e proteger o seu patrimônio com produtos efetivos.</span></p>`;
+            } else if (totalScore >= 45) {
+              resultMessage = `<span class="fs-5 fw-bold">Potencial Poupador ou Poupador</span><br><br>
+                                          <p class="text-start">Você tem uma vida financeira equilibrada. Mesmo que esteja tudo em dia, o ideal não é viver Receita = Despesa. Você precisa quebrar esse ciclo e começar a poupar.<br>
+                                          Você tem uma “torneira” aberta que está lhe apertando. Veja se é possível antecipar alguma dívida com desconto, se alguma compra parcelada já está se encerrando e evite despesas desnecessárias.<br<
+                                          Você não precisa deixar de consumir ou sair, mas sim, fazer de forma mais consciente.<br>
+                                          Essas pequenas atitudes vão fazer toda a diferença para você começar a poupar algum valor e avançar para o próximo estágio: guarda dinheiro para imprevistos e posteriormente para investir.<br>
+                                        <span class="fw-bold">Um bom profissional pode lhe orientar como aumentar o seu retorno, diminuir os seus riscos e proteger o seu patrimônio com produtos efetivos.</span></p>`;
+            } else {
+              resultMessage = `<span class="fs-5 fw-bold">Endividado ou Apertado</span><br><br>
+                          <p class="text-start">Sua situação é delicada, você pode estar inadimplente ou muito próximo disso. <br>
+                          Você precisa agir e isso não é vergonha.<br>
+                          Ficar parado faz você pagar juros e isso é terrível.<br>
+                          Comece fazendo uma lista de contas atrasadas e fornecedores atrasados. <br>
+                          Companhia de energia, água e gás são empresas que costumam parcelar dívidas atrasadas para lhe ajudar no curto prazo.<br>
+                          Bancos e financeiras: é importante procurá-los e negociar um novo prazo e uma parcela que caiba no seu bolso.<br>
+                          O seu nome precisa ficar limpo.<br>
+                          É bom para você e é bom para o credor mostrar a iniciativa que tem o interesse em resolver o problema. <br>
+                          Podem ocorrer alguns sacrifícios, mas o seu “eu” futuro vai agradecer.<br>
+                        <span class="fw-bold">Um bom profissional pode lhe orientar como aumentar o seu retorno, diminuir os seus riscos e proteger o seu patrimônio com produtos efetivos.</span></p>`;
+            }
+            resultPontos.innerHTML = `Sua pontuação é <span class="fs-5 fw-bold">${totalScore}</span>.`;
+            resultText.innerHTML = resultMessage;
+          }
+        });
+      });
+    });
+
+  </script>
+</body>
+
+</html>

@@ -242,3 +242,78 @@ function moeda(numero) {
   
 	return formatter.format(numero);
 }
+
+function atualiza(tipo) {
+	switch (tipo) {
+		case 1:
+			var sai = parseInt(document.getElementById("sai").value);
+			var saif = sai.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+			document.getElementById("s1valor1").value = saif;
+			break;
+		case 2:
+		var sai2 = parseInt(document.getElementById("sai2").value);
+		var saif2 = sai2.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+		document.getElementById("s1valor2").value = saif2;
+			
+			break;
+		case 3:
+		var sai3 = parseInt(document.getElementById("sai3").value);
+		document.getElementById("s1valor3").value = sai3;
+			
+			break;
+		case 4:
+		  let valor1 =  document.getElementById("s1valor1").value;
+		  valor1 = valor1.replace(/\D/g, '');
+		  valor1 = new Intl.NumberFormat('pt-BR', {
+			style: 'currency',
+			currency: 'BRL'
+		  }).format(valor1 / 100);
+		  document.getElementById("s1valor1").value = valor1
+			break;
+		case 5:
+		let valor2 =  document.getElementById("s1valor2").value;
+		valor2 = valor2.replace(/\D/g, '');
+		valor2 = new Intl.NumberFormat('pt-BR', {
+		  style: 'currency',
+		  currency: 'BRL'
+		}).format(valor2 / 100);
+		document.getElementById("s1valor2").value = valor2
+		  break;
+		   
+		case 6:
+			var sai4 = parseInt(document.getElementById("sai4").value);
+			var sai4f = sai4.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+			document.getElementById("s2valor1").value = sai4f;
+			break;
+		case 7:
+		let valor3 =  document.getElementById("s2valor1").value;
+		valor3 = valor3.replace(/\D/g, '');
+		valor3 = new Intl.NumberFormat('pt-BR', {
+		  style: 'currency',
+		  currency: 'BRL'
+		}).format(valor3 / 100);
+		document.getElementById("s2valor1").value = valor3
+		  break;
+		case 8:
+		var sai5 = parseInt(document.getElementById("sai5").value);
+		var sai5f = sai5.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+		document.getElementById("s3valor1").value = sai5f;
+		break;
+		
+		case 9:
+		let valor4 =  document.getElementById("s3valor1").value;
+		valor4 = valor4.replace(/\D/g, '');
+		valor4 = new Intl.NumberFormat('pt-BR', {
+		  style: 'currency',
+		  currency: 'BRL'
+		}).format(valor4 / 100);
+		document.getElementById("s3valor1").value = valor4
+		  break;
+
+		default:
+			pass;
+	}
+
+
+}
+
