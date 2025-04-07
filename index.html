@@ -364,22 +364,24 @@
             <div class="carousel-item getContato">
               <div class="question">Informe os seus dados de contato para enviarmos uma cópia dos resultados.</div>
               <div class="options text-start">
+                
                 <div class="d-flex flex-column">
                   <div class="mt-2">
                     <label for="valor1">Infome seu nome.</label>
-                    <input type="text" id="quiznome" class="form-control border">
+                    <input type="text" id="quiznome" name="quiznome" class="form-control border">
                   </div>
                   <div class="mt-2">
                     <label for="valor2">Informe seu telefone.</label>
-                    <input type="number" id="quiztel" class="form-control border">
+                    <input type="text" id="quiztel" name="quiztel" class="form-control border" oninput="mascaraTelefone(event)">
                   </div>
                   <div class="mt-2">
                     <label for="valor1">Informe seu email.</label>
-                    <input type="email" id="quizemail" class="form-control border">
+                    <input type="email" id="quizemail" name="quizemail" class="form-control border">
 
                   </div>
 
                 </div>
+              
               </div>
               <button class="btn btn-primary next-btn">Próxima</button>
             </div>
@@ -616,76 +618,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="javascript/scripts.js"></script>
   
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const carousel = new bootstrap.Carousel(document.getElementById('quizCarousel'));
-      const nextButtons = document.querySelectorAll('.next-btn');
-      const resultText = document.getElementById('resultText');
-      const resultPontos = document.getElementById('resultPontos');
-      let totalScore = 0;
-
-
-      nextButtons.forEach(button => {
-        button.addEventListener('click', () => {
-          const activeItem = document.querySelector('.carousel-item.active');
-          const selectedOption = activeItem.querySelector('input[type="radio"]:checked');
-
-
-          if (activeItem.classList.contains('getContato')) {
-            const nome = document.getElementById('quiznome').value.trim();
-            const telefone = document.getElementById('quiztel').value.trim();
-            const email = document.getElementById('quizemail').value.trim();
-            if (nome === '' || telefone === '' || email === '') {
-              alert('Por favor, preencha todos os campos.');
-            }
-            else {
-              carousel.next();
-            }
-          }
-          else {
-            if (selectedOption) {
-              totalScore += parseInt(selectedOption.value);
-              carousel.next();
-            } else {
-              alert('Por favor, selecione uma opção antes de continuar.');
-            }
-          }
-          // Se for a última pergunta, mostrar o resultado
-          if (activeItem.nextElementSibling.classList.contains('result')) {
-            let resultMessage = '';
-            if (totalScore >= 70) {
-              resultMessage = `<span class="fs-5 fw-bold">Potencial Investidor ou Investidor</span><br><br>
-                                          <p class="text-start">Parabéns, você é uma das poucas pessoas que alcança essa pontuação!<br>
-                                          Você tem uma boa organização financeira, já deve ter uma reserva de emergência, além de conseguir investir pensando no seu futuro. Também compreende que o ato de se proteger anda em conjunto o de investir.<br>
-                                          <span class="fw-bold">Um bom profissional pode lhe orientar como aumentar o seu retorno, diminuir os seus riscos e proteger o seu patrimônio com produtos efetivos.</span></p>`;
-            } else if (totalScore >= 45) {
-              resultMessage = `<span class="fs-5 fw-bold">Potencial Poupador ou Poupador</span><br><br>
-                                          <p class="text-start">Você tem uma vida financeira equilibrada. Mesmo que esteja tudo em dia, o ideal não é viver Receita = Despesa. Você precisa quebrar esse ciclo e começar a poupar.<br>
-                                          Você tem uma “torneira” aberta que está lhe apertando. Veja se é possível antecipar alguma dívida com desconto, se alguma compra parcelada já está se encerrando e evite despesas desnecessárias.<br<
-                                          Você não precisa deixar de consumir ou sair, mas sim, fazer de forma mais consciente.<br>
-                                          Essas pequenas atitudes vão fazer toda a diferença para você começar a poupar algum valor e avançar para o próximo estágio: guarda dinheiro para imprevistos e posteriormente para investir.<br>
-                                        <span class="fw-bold">Um bom profissional pode lhe orientar como aumentar o seu retorno, diminuir os seus riscos e proteger o seu patrimônio com produtos efetivos.</span></p>`;
-            } else {
-              resultMessage = `<span class="fs-5 fw-bold">Endividado ou Apertado</span><br><br>
-                          <p class="text-start">Sua situação é delicada, você pode estar inadimplente ou muito próximo disso. <br>
-                          Você precisa agir e isso não é vergonha.<br>
-                          Ficar parado faz você pagar juros e isso é terrível.<br>
-                          Comece fazendo uma lista de contas atrasadas e fornecedores atrasados. <br>
-                          Companhia de energia, água e gás são empresas que costumam parcelar dívidas atrasadas para lhe ajudar no curto prazo.<br>
-                          Bancos e financeiras: é importante procurá-los e negociar um novo prazo e uma parcela que caiba no seu bolso.<br>
-                          O seu nome precisa ficar limpo.<br>
-                          É bom para você e é bom para o credor mostrar a iniciativa que tem o interesse em resolver o problema. <br>
-                          Podem ocorrer alguns sacrifícios, mas o seu “eu” futuro vai agradecer.<br>
-                        <span class="fw-bold">Um bom profissional pode lhe orientar como aumentar o seu retorno, diminuir os seus riscos e proteger o seu patrimônio com produtos efetivos.</span></p>`;
-            }
-            resultPontos.innerHTML = `Sua pontuação é <span class="fs-5 fw-bold">${totalScore}</span>.`;
-            resultText.innerHTML = resultMessage;
-          }
-        });
-      });
-    });
-
-  </script>
 </body>
 
 </html>

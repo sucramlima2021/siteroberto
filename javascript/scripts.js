@@ -1,40 +1,104 @@
+const carousel = new bootstrap.Carousel(document.getElementById('quizCarousel'));
+const nextButtons = document.querySelectorAll('.next-btn');
+const resultText = document.getElementById('resultText');
+const resultPontos = document.getElementById('resultPontos');
+
+let totalScore = 0;
+
+nextButtons.forEach(button => {
+	button.addEventListener('click', () => {
+	  const activeItem = document.querySelector('.carousel-item.active');
+	  const selectedOption = activeItem.querySelector('input[type="radio"]:checked');
+
+
+	  if (activeItem.classList.contains('getContato')) {
+		const nome = document.getElementById('quiznome').value.trim();
+		const telefone = document.getElementById('quiztel').value.trim();
+		const email = document.getElementById('quizemail').value.trim();
+		if (nome === '' || telefone === '' || email === '') {
+		  alert('Por favor, preencha todos os campos.');
+		}
+		else {
+		  enviaForm();
+		  
+		}
+	  }
+	  else {
+		if (selectedOption) {
+		  totalScore += parseInt(selectedOption.value);
+		  carousel.next();
+		} else {
+		  alert('Por favor, selecione uma opção antes de continuar.');
+		}
+	  }
+	  // Se for a última pergunta, mostrar o resultado
+	  if (activeItem.nextElementSibling.classList.contains('result')) {
+		let resultMessage = '';
+		if (totalScore >= 70) {
+		  resultMessage = `<span class="fs-5 fw-bold">Potencial Investidor ou Investidor</span><br><br>
+									  <p class="text-start">Parabéns, você é uma das poucas pessoas que alcança essa pontuação!<br>
+									  Você tem uma boa organização financeira, já deve ter uma reserva de emergência, além de conseguir investir pensando no seu futuro. Também compreende que o ato de se proteger anda em conjunto o de investir.<br>
+									  <span class="fw-bold">Um bom profissional pode lhe orientar como aumentar o seu retorno, diminuir os seus riscos e proteger o seu patrimônio com produtos efetivos.</span></p>`;
+		} else if (totalScore >= 45) {
+		  resultMessage = `<span class="fs-5 fw-bold">Potencial Poupador ou Poupador</span><br><br>
+									  <p class="text-start">Você tem uma vida financeira equilibrada. Mesmo que esteja tudo em dia, o ideal não é viver Receita = Despesa. Você precisa quebrar esse ciclo e começar a poupar.<br>
+									  Você tem uma “torneira” aberta que está lhe apertando. Veja se é possível antecipar alguma dívida com desconto, se alguma compra parcelada já está se encerrando e evite despesas desnecessárias.<br<
+									  Você não precisa deixar de consumir ou sair, mas sim, fazer de forma mais consciente.<br>
+									  Essas pequenas atitudes vão fazer toda a diferença para você começar a poupar algum valor e avançar para o próximo estágio: guarda dinheiro para imprevistos e posteriormente para investir.<br>
+									<span class="fw-bold">Um bom profissional pode lhe orientar como aumentar o seu retorno, diminuir os seus riscos e proteger o seu patrimônio com produtos efetivos.</span></p>`;
+		} else {
+		  resultMessage = `<span class="fs-5 fw-bold">Endividado ou Apertado</span><br><br>
+					  <p class="text-start">Sua situação é delicada, você pode estar inadimplente ou muito próximo disso. <br>
+					  Você precisa agir e isso não é vergonha.<br>
+					  Ficar parado faz você pagar juros e isso é terrível.<br>
+					  Comece fazendo uma lista de contas atrasadas e fornecedores atrasados. <br>
+					  Companhia de energia, água e gás são empresas que costumam parcelar dívidas atrasadas para lhe ajudar no curto prazo.<br>
+					  Bancos e financeiras: é importante procurá-los e negociar um novo prazo e uma parcela que caiba no seu bolso.<br>
+					  O seu nome precisa ficar limpo.<br>
+					  É bom para você e é bom para o credor mostrar a iniciativa que tem o interesse em resolver o problema. <br>
+					  Podem ocorrer alguns sacrifícios, mas o seu “eu” futuro vai agradecer.<br>
+					<span class="fw-bold">Um bom profissional pode lhe orientar como aumentar o seu retorno, diminuir os seus riscos e proteger o seu patrimônio com produtos efetivos.</span></p>`;
+		}
+		resultPontos.innerHTML = `Sua pontuação é <span class="fs-5 fw-bold">${totalScore}</span>.`;
+		resultText.innerHTML = resultMessage;
+	  }
+	});
+  });
+
 const carousel1 = new bootstrap.Carousel(document.getElementById('sarCarousel'));
 const carousel2 = new bootstrap.Carousel(document.getElementById('srpCarousel'));
 const carousel3 = new bootstrap.Carousel(document.getElementById('smCarousel'));
-var aText = new Array(
-	"“Minha proposta é transformar a sua vida financeira, para que você viva o presente, invista para o futuro e proteja suas conquistas.”"
-	);
-	var iSpeed = 30; // time delay of print out
-	var iIndex = 0; // start printing array at this posision
-	var iArrLength = aText[0].length; // the length of the text array
-	var iScrollAt = 20; // start scrolling up at this many lines
-	 
-	var iTextPos = 0; // initialise text position
-	var sContents = ''; // initialise contents variable
-	var iRow; // initialise current row
-	function typewriter(){
-				 
-     sContents =  ' ';
-     iRow = Math.max(0, iIndex-iScrollAt);
-     var destination = document.getElementById("typedtext");
-     destination.style.innerHTML = "";
-     while ( iRow < iIndex ) {
-      sContents += aText[iRow++] + '<br />';
-     }
-     destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos) + "_";
-     if ( iTextPos++ == iArrLength ) {
-      iTextPos = 0;
-      iIndex++;
-      if ( iIndex != aText.length ) {
-       iArrLength = aText[iIndex].length;
-       setTimeout("typewriter()", 500);
-      }
-     } else {
-      setTimeout("typewriter()", iSpeed);
-     }
-    }
-    
-    
+const telefoneInput = document.getElementById('quiztel');
+function enviaForm() {
+	console.log("foi");
+	const nome = document.getElementById('quiznome').value;
+	const tel = document.getElementById('quiztel').value;
+	const email = document.getElementById('quizemail').value;
+  
+	fetch('/envia.php', { // Alterado para o script PHP
+	  method: 'POST',
+	  headers: {
+		'Content-Type': 'application/json'
+	  },
+	  body: JSON.stringify({ nome: nome, tel: tel, email: email })
+	})
+	.then(response => response.json())
+	.then(data => {
+	  if (data.success) {
+		alert(data.message);
+		document.getElementById('meuFormulario').reset();
+		carousel.next();
+	  } else {
+		alert(data.message);
+	  }
+	})
+	.catch(error => {
+	  console.error('Erro na requisição:', error);
+	  alert('Ocorreu um erro ao enviar o e-mail. Confirme os dados');
+	});
+  };
+
+
 
 let tip = document.getElementById("canvasId").getContext("2d");
 let chartObj = new Chart(tip, {
@@ -317,3 +381,37 @@ function atualiza(tipo) {
 
 }
 
+function validarEmail(email) {
+	// Expressão regular para validar um formato de email geral
+	const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  
+	// Testar se o email corresponde ao padrão
+	return regexEmail.test(email);
+  }
+
+  function validarTelefoneBrasil(telefone) {
+	// Formato esperado: (XX) XXXXX-XXXX ou (XX) XXXXXXXXX
+	const regexTelefoneBR = /^\(\d{2}\) \d{4,5}-\d{4}$/;
+	return regexTelefoneBR.test(telefone);
+  }
+
+  function mascaraTelefone(event) {
+	if (event.inputType != 'deleteContentBackward') {
+	var input = telefoneInput.value;
+	var valor = input.replace(/\D/g, ''); // Remove todos os caracteres não numéricos
+	var tamanho = valor.length;
+	
+	if (tamanho == 1){
+	input = "(" + valor;
+	}
+	if (tamanho == 2) {
+	  input ="(" + valor + ") ";
+	}
+	if (tamanho == 7) {
+	  input = "(" + valor.substring(0, 2) + ") " + valor.substring(2, 7) + "-";
+	}
+	if (tamanho > 11) {
+        input = input.slice(0, 15);
+      } 
+	telefoneInput.value = input;
+  }}
