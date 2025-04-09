@@ -1,4 +1,5 @@
 ---
 deployment:
   tasks:
-    - /bin/cp -r repositories/siteroberto/* $DEPLOYPATH
+    - export DEPLOYPATH=/home/velasques/public_html
+    - /bin/rsync -av --exclude='.git' --exclude='.cpanel.yml' /home/velasques/repositories/siteroberto/ $DEPLOYPATH

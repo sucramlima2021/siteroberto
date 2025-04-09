@@ -5,7 +5,7 @@ require 'vendor/autoload.php';
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
-
+$emailPassword = getenv('EMAIL_PASSWORD');
 $mail = new PHPMailer(true);
 
 
@@ -16,7 +16,7 @@ try {
     $mail->Host       = 'mail.velasquesconsultoria.com.br';                     //Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
     $mail->Username   = 'site@velasquesconsultoria.com.br';                     //SMTP username
-    $mail->Password   = '543#SenhaEmpresa#210';                               //SMTP password
+    $mail->Password   = $emailPassword;                               //SMTP password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
     $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
