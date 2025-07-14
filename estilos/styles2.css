@@ -2,6 +2,15 @@ body{
   background-color: rgb(230, 224, 216);
 }
 
+.botao-flutuante {
+            
+  position: fixed; /* Fixa a posição do botão */
+  bottom: 70px; /* Distância do botão para a parte inferior da tela */
+  right: 20px; /* Distância do botão para a parte direita da tela */
+  cursor: pointer; /* Muda o cursor para indicar que o botão é clicável */
+  z-index: 1000;
+          }
+
 @font-face {
   font-family: 'Luthier';
   src: url('/siteroberto/Luthier-Bold.ttf') format('ttf');
@@ -118,4 +127,24 @@ body{
     font-size: 20px;
   }
   
+}
+
+#btnTop {
+  display: none; /* Oculta o botão inicialmente */
+  position: fixed; /* Fixa o botão na tela */
+  bottom: 20px;
+  right: 20px;
+  z-index: 99; /* Garante que o botão fique acima de outros elementos */
+  border: none;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+  color: white;
+  cursor: pointer;
+  padding: 3px;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+#btnTop:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }

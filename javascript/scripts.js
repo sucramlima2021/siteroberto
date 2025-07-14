@@ -108,7 +108,7 @@ let chartObj = new Chart(tip, {
 		datasets: [{
 			label: "Cliente",
 			data: [1000, 1160, 1345, 1560, 1809, 2098],
-			backgroundColor: ['coral'],
+			backgroundColor: ['rgb(0,41,96)'],
 			borderColor: ["black"],
 			borderWidth: 1,
 			hoverBackgroundColor: ['tomato', 'cyan', 'lightpink', 'limegreen', 'deepskyblue', 'darkred'],
@@ -116,7 +116,7 @@ let chartObj = new Chart(tip, {
             {
                 label: "Poupança",
                 data: [1000, 1070, 1144, 1225, 1310, 1402],
-                backgroundColor: ['aqua'],
+                backgroundColor: ['rgb(171,120,54)'],
                 borderColor: ["black"],
                 borderWidth: 1,
                 hoverBackgroundColor: ['tomato', 'cyan', 'lightpink', 'limegreen', 'deepskyblue', 'darkred'],
@@ -415,3 +415,20 @@ function validarEmail(email) {
       } 
 	telefoneInput.value = input;
   }}
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("btnTop").style.display = "block";
+  } else {
+    document.getElementById("btnTop").style.display = "none";
+  }
+}
+
+document.getElementById("btnTop").addEventListener("click", function() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
